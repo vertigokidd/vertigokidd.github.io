@@ -1,0 +1,148 @@
+body {
+  padding:40px 20px 0 20px;
+  font-family: 'Alike', serif;
+  background-color:rgba(246,247,189,.4);
+}
+
+.bio-container {
+  width:900px;
+  margin:auto;
+  padding-bottom:20px;
+  border-bottom:1px dashed black;
+}
+
+.portrait {
+  display:block;
+  background-image:url("images/portrait.png");
+  height:300px;
+  width:300px;
+  border-radius:10px;
+  margin:auto;
+  -moz-transition: border 0.3s linear;
+  -o-transition: border 0.3s linear;
+  -webkit-transition: border 0.3s linear;
+  transition: border 0.3s linear;
+}
+
+.main {
+  display:block;
+  width:570px;
+  vertical-align: top;
+  margin:auto;
+  text-align:center;
+}
+
+.main h1 {
+  margin-top:30px;
+}
+
+.main h3 {
+  font-style:italic;
+}
+
+.main p {
+  font-size: 1.2em;
+  line-height:160%;
+  text-align:justify;
+}
+
+a {
+  text-decoration: none;
+  color:black;
+  -moz-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
+a:hover {
+  color:#5F9B7F;
+  -moz-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
+.projects {
+  width:900px;
+  margin:40px auto;
+}
+
+.projects-header {
+  width:200px;
+  margin:auto;
+}
+
+ul {
+  padding:0;
+
+}
+
+.projects li {
+  list-style:none;
+  display:inline-block;
+}
+
+.projects li img {
+  border-radius:5px;
+  opacity:0.6;
+}
+
+.projects li img:hover {
+  opacity:1.0;
+  -moz-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+
+.projects li div {
+  margin-right:70px;
+  font-size:1em;
+  text-align:center;
+  width:250px;
+}
+
+.projects li:last-child div {
+  margin-right:0;
+}
+
+.icons {
+  display:block;
+  width:260px;
+  margin:auto;
+  margin-top:30px;
+  margin-bottom:60px;
+}
+
+i {
+  font-size:3em;
+  margin:0 20px 0 20px;
+}
+
+
+
+
+
+/*body {
+  background-color: #69D2E7;
+  border:50px solid #A7DBD8;
+  margin:0;
+  height:100%;
+  -moz-transition: border 0.7s linear;
+  -o-transition: border 0.7s linear;
+  -webkit-transition: border 0.7s linear;
+  transition: border 0.7s linear;
+}
+
+body:hover {
+  border:50px solid #E0E4CC;
+  -moz-transition: border 0.7s linear;
+  -o-transition: border 0.7s linear;
+  -webkit-transition: border 0.7s linear;
+  transition: border 0.7s linear;
+}*/
+
+
+
+/* http://www.colourlovers.com/palette/92095/Giant_Goldfish */
