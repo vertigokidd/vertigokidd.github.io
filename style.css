@@ -1,7 +1,25 @@
 body {
-  padding:40px 20px 0 20px;
+  padding:0 20px 0 20px;
   font-family: 'Alike', serif;
   background-color:rgba(246,247,189,.4);
+}
+
+.navbar {
+  width:200px;
+  margin-left:75%;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar ul li {
+  display:inline-block;
+  padding:0 15px;
+}
+
+.navbar li:first-child {
+  border-right:1px solid black;
 }
 
 .bio-container {
@@ -121,8 +139,16 @@ i {
 }
 
 
+.resume {
+  width:900px;
+  margin:auto;
+  line-height:150%;
+  font-size: 1.2em;
+}
 
-
+.resume ul {
+  list-style: none;
+}
 
 /*body {
   background-color: #69D2E7;
