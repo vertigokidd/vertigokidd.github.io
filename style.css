@@ -154,25 +154,33 @@ i {
   list-style: none;
 }
 
-/*body {
-  background-color: #69D2E7;
-  border:50px solid #A7DBD8;
-  margin:0;
-  height:100%;
-  -moz-transition: border 0.7s linear;
-  -o-transition: border 0.7s linear;
-  -webkit-transition: border 0.7s linear;
-  transition: border 0.7s linear;
-}
+@media screen and (max-width: 500px){
+  .navbar {
+  margin-left:50%;
+  }
 
-body:hover {
-  border:50px solid #E0E4CC;
-  -moz-transition: border 0.7s linear;
-  -o-transition: border 0.7s linear;
-  -webkit-transition: border 0.7s linear;
-  transition: border 0.7s linear;
-}*/
+  .bio-container {
+    width:400px;
+    padding:10px;
+    margin: 20px auto;
+  }
 
+  .main {
+    width:300px;
+  }
 
+  .projects-header{
+    width:200px;
+    margin:20px;
+    text-align:center;
+  }
 
-/* http://www.colourlovers.com/palette/92095/Giant_Goldfish */
+  .projects li div {
+    display:inline-block;
+    width:450px;
+    margin:20px auto;
+  }
+
+  .resume {
+  width:400px;
+  }
