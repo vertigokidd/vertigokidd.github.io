@@ -81,7 +81,7 @@ a:hover {
   transition: color 0.3s linear;
 }
 
-.reporting {
+.visible-link {
   color: #84B39D;
 }
 
@@ -131,7 +131,7 @@ ul {
 
 .icons {
   display:block;
-  width:260px;
+  width:350px;
   margin:auto;
   margin-top:30px;
   margin-bottom:60px;
