@@ -154,6 +154,11 @@ i {
   list-style: none;
 }
 
+.letter {
+  width:500px;
+  margin:50px auto;
+}
+
 @media screen and (max-width: 500px){
   .navbar {
   margin-left:50%;
