@@ -154,6 +154,19 @@ i {
   list-style: none;
 }
 
+.resume .title {
+  font-style:italic;
+}
+
+.resume h3 {
+  font-size: 1.5em;
+}
+
+.resume span {
+  display:inline-block;
+  float:right;
+}
+
 .letter {
   width:500px;
   margin:50px auto;
