@@ -176,6 +176,23 @@ i {
   margin:50px auto;
 }
 
+.bendy {
+  margin:40px auto;
+  width:800px;
+}
+
+.bendy-header {
+  width:200px;
+  margin:auto;
+}
+
+#bendyCanvas {
+  display:inline-block;
+  width:800px;
+  height:500px;
+  border:1px solid black;
+}
+
 @media screen and (max-width: 500px){
   .navbar {
   margin-left:50%;
