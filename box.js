@@ -21,14 +21,12 @@ $(document).ready(function() {
 
   // Add the cube
 
-  var geometry = new THREE.BoxGeometry(5,5,5);
+  var geometry = new THREE.BoxGeometry(2,2,2);
   var material = new THREE.MeshPhongMaterial( { color: 0x3366FF, 
                                                 specular: 0x424242 } );
   var cube = new THREE.Mesh(geometry, material);
 
   cube.castShadow = true;
-
-  // cube.position.y = 0.2;
 
   scene.add(cube); // Cube will be added to (0,0,0)
 
@@ -42,7 +40,7 @@ $(document).ready(function() {
 
   // NOTE: Z-Axis is flipped (forward is negative, backward is positive)
   ground.rotation.z = 0;
-  ground.position.z = -10;
+  ground.position.z = -5;
 
   ground.receiveShadow = true;
 
@@ -52,8 +50,8 @@ $(document).ready(function() {
 
   var directionalLight = new THREE.DirectionalLight( "white", // color
                                                      0.6 ); // intensity
-  directionalLight.position.set(-3, 3, 8);
-  directionalLight.target.position.set(0,0,0);
+  directionalLight.position.set(-3, 2, 6);
+  directionalLight.target.position.set(0,1,0);
 
   // Shadows
   directionalLight.castShadow = true;
@@ -64,18 +62,18 @@ $(document).ready(function() {
   directionalLight.shadowCameraVisible = true;
   
   // Dimensions for the light box
-  directionalLight.shadowCameraNear = -1;
-  directionalLight.shadowCameraFar = 30;
-  directionalLight.shadowCameraLeft = -5;
-  directionalLight.shadowCameraRight = 5;
-  directionalLight.shadowCameraTop = 5;
-  directionalLight.shadowCameraBottom = -5;
+  directionalLight.shadowCameraNear = 5;
+  directionalLight.shadowCameraFar = 17;
+  directionalLight.shadowCameraLeft = -3;
+  directionalLight.shadowCameraRight = 3;
+  directionalLight.shadowCameraTop = 3;
+  directionalLight.shadowCameraBottom = -3;
 
   scene.add(directionalLight);
 
   // Add camera
 
-  camera.position.z = 20;
+  camera.position.z = 12;
   // camera.position.set(0,0,5);
   camera.lookAt(scene.position);
 
