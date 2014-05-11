@@ -22,7 +22,7 @@ $(document).ready(function() {
   // Add the cube
 
   var geometry = new THREE.BoxGeometry(2,2,2);
-  var material = new THREE.MeshPhongMaterial( { color: 0x3366FF, 
+  var material = new THREE.MeshPhongMaterial( { color: 0xFF3366, 
                                                 specular: 0x424242 } );
   var cube = new THREE.Mesh(geometry, material);
 
@@ -59,6 +59,7 @@ $(document).ready(function() {
   directionalLight.shadowMapWidth = 1024;
   directionalLight.shadowMapHeight = 1024;
 
+  // Debugging
   directionalLight.shadowCameraVisible = true;
   
   // Dimensions for the light box
@@ -74,8 +75,26 @@ $(document).ready(function() {
   // Add camera
 
   camera.position.z = 12;
-  // camera.position.set(0,0,5);
-  camera.lookAt(scene.position);
+
+  // Add mouse variable and listener function
+
+  var xCenter = window.innerWidth / 2;
+  var yCenter = window.innerHeight / 2;
+  var cameraLookPoint = new THREE.Vector3(0,0,0);
+
+  $("canvas").mousemove(function(event) {
+    var xPosition = -(xCenter - (event.pageX)) / 40;
+    var yPosition = (yCenter - (event.pageY)) / 40;
+    var mouse = [xPosition, yPosition];
+    // console.log(mouse);
+    // console.log(xCenter);
+    cameraLookPoint.setX(xPosition);
+    cameraLookPoint.setY(yPosition);
+  });
+
+
+
+  
 
   // Add a render loop
 
@@ -85,6 +104,10 @@ $(document).ready(function() {
     // Rotate the cube
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
+    // camera.position.x += 0.1;
+    // camera.position.x = mouse[0];
+    // camera.position.y = mouse[1];
+    camera.lookAt(cameraLookPoint);
 
     renderer.render(scene, camera);
   }
