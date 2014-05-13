@@ -67,7 +67,7 @@ body, html {
 
 a {
   text-decoration: none;
-  color:black;
+  color: #6E7D9E;
   -moz-transition: color 0.3s linear;
   -o-transition: color 0.3s linear;
   -webkit-transition: color 0.3s linear;
@@ -75,16 +75,14 @@ a {
 }
 
 a:hover {
-  color:#5F9B7F;
-  -moz-transition: color 0.3s linear;
-  -o-transition: color 0.3s linear;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
+  text-decoration:underline;
+  -moz-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 
-.visible-link {
-  color: #84B39D;
-}
+/************************/
 
 .projects {
   width:900px;
