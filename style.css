@@ -1,57 +1,55 @@
-body {
-  padding:0 20px 0 20px;
+body, html {
+  height:100%;
+  margin:0;
+  padding:0;
   font-family: 'Source Code Pro';
-  background-color:rgba(246,247,189,.4);
+  /*background-color:rgba(246,247,189,.4);*/
 }
 
-.navbar {
-  width:200px;
-  margin-left:75%;
+/************ SIDEBAR ***************/
+
+.sidebar {
+  /*position:absolute;*/
+  position:fixed;
+  width:20%;
+  height:100%;
+  /*display:inline-block;*/
+  border:1px dotted red;
+  float:left;
+  padding:20px;
+  background-color: #D3BB8C;
 }
 
-.navbar ul {
+.sidebar h1 {
+  font-size:1.2em;
+}
+
+.sidebar ul {
   list-style: none;
+  padding: 20px;
 }
 
-.navbar ul li {
-  display:inline-block;
-  padding:0 15px;
+.sidebar ul li {
+  /*display:inline-block;*/
+  padding:10px 15px;
 }
 
-.navbar li:first-child {
-  border-right:1px solid black;
-}
 
-.bio-container {
-  width:900px;
-  margin:auto;
-  padding-bottom:20px;
-  border-bottom:1px dashed black;
-}
-
-.portrait {
-  display:block;
-  background-image:url("images/portrait.png");
-  height:300px;
-  width:300px;
-  border-radius:10px;
-  margin:auto;
-  -moz-transition: border 0.3s linear;
-  -o-transition: border 0.3s linear;
-  -webkit-transition: border 0.3s linear;
-  transition: border 0.3s linear;
-}
+/************ MAIN DIV **************/
 
 .main {
-  display:block;
-  width:800px;
-  vertical-align: top;
-  margin:auto;
-  text-align:center;
+  display:inline-block;
+  margin-left:25%;
+  width:70%;
+  height:100%;
+  /*text-align:center;*/
+  border:1px dotted green;
+  /*position:fixed;*/
 }
 
 .main h1 {
-  margin-top:30px;
+  margin:30px;
+  padding:10px;
 }
 
 .main h3 {
@@ -59,10 +57,13 @@ body {
 }
 
 .main p {
-  font-size: 1.2em;
+  font-size: 1em;
   line-height:160%;
   text-align:justify;
+  padding:30px;
 }
+
+/********** LINK STYLING ************/
 
 a {
   text-decoration: none;
