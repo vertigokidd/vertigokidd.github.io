@@ -16,22 +16,22 @@ body, html {
   /*display:inline-block;*/
   border:1px dotted red;
   float:left;
-  padding:20px;
+  padding:30px 20px;
   background-color: #D3BB8C;
 }
 
 .sidebar h1 {
   font-size:1.2em;
+  padding:20px 20px;
 }
 
 .sidebar ul {
   list-style: none;
-  padding: 20px;
+  padding: 20px 20px;
 }
 
 .sidebar ul li {
-  /*display:inline-block;*/
-  padding:10px 15px;
+  padding-top: 15px;
 }
 
 
