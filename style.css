@@ -12,7 +12,7 @@ body, html {
   position:fixed;
   width:20%;
   height:100%;
-  border:1px dotted red;
+  /*border:1px dotted red;*/
   float:left;
   padding:30px 20px;
   background-color: #D3BB8C;
@@ -52,7 +52,7 @@ body, html {
   background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 80%);
   background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 80%);
   background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 80%);
-  border:1px dotted blue;
+  /*border:1px dotted blue;*/
 }
 
 
@@ -63,7 +63,7 @@ body, html {
   margin-left:25%;
   width:70%;
   height:100%;
-  border:1px dotted green;
+  /*border:1px dotted green;*/
   padding:40px 20px 80px 20px;
 }
 
@@ -110,52 +110,3 @@ a:hover {
 
 
 /************************/
-
-
-.bendy {
-  margin:40px auto;
-  width:800px;
-}
-
-.bendy-header {
-  width:200px;
-  margin:auto;
-}
-
-#bendyCanvas {
-  display:inline-block;
-  width:800px;
-  height:500px;
-  border:1px solid black;
-}
-
-@media screen and (max-width: 500px){
-  .navbar {
-  margin-left:50%;
-  }
-
-  .bio-container {
-    width:400px;
-    padding:10px;
-    margin: 20px auto;
-  }
-
-  .main {
-    width:300px;
-  }
-
-  .projects-header{
-    width:200px;
-    margin:20px;
-    text-align:center;
-  }
-
-  .projects li div {
-    display:inline-block;
-    width:450px;
-    margin:20px auto;
-  }
-
-  .resume {
-  width:400px;
-  }
