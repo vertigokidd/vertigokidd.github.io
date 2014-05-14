@@ -64,7 +64,7 @@ body, html {
   width:70%;
   height:100%;
   border:1px dotted green;
-  padding:40px 20px;
+  padding:40px 20px 80px 20px;
 }
 
 .main h1 {
