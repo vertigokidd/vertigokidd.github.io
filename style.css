@@ -83,6 +83,11 @@ body, html {
   padding:0px 30px;
 }
 
+.main img {
+  max-width:80%;
+  padding:0px 30px;
+}
+
 /********** LINK STYLING ************/
 
 a {
