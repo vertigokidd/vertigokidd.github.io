@@ -105,7 +105,7 @@ $(document).ready(function() {
   }
 
   $("canvas").mousemove(function(event) {
-    var xPosition = -(xCenter - (event.pageX)) / 40;
+    var xPosition = -(xCenter - (event.pageX)) / 60;
     // console.log(xPosition);
     cameraPosition[0] = findXPosition(xPosition);
     cameraPosition[1] = findZPosition(xPosition);
@@ -124,12 +124,9 @@ $(document).ready(function() {
     // Rotate the cube
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
-    // camera.position.x += 0.1;
-    // camera.position.x = mouse[0];
-    // camera.position.y = mouse[1];
     camera.lookAt(cameraLookPoint);
     camera.position.x = cameraPosition[0];
-    camera.position.z =cameraPosition[1];
+    camera.position.z = cameraPosition[1];
     renderer.render(scene, camera);
   }
 
