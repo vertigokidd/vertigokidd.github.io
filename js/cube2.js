@@ -10,6 +10,8 @@ $(document).ready(function() {
                                             0.1, // near clipping
                                             1000 ); // far clipping
 
+  camera.setLens(35, 35);
+
   var renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -60,7 +62,7 @@ $(document).ready(function() {
   directionalLight.shadowMapHeight = 1024;
 
   // Debugging
-  directionalLight.shadowCameraVisible = true;
+  // directionalLight.shadowCameraVisible = true;
   
   // Dimensions for the light box
   directionalLight.shadowCameraNear = 5;
@@ -76,20 +78,38 @@ $(document).ready(function() {
 
   camera.position.z = 12;
 
-  // Add mouse variable and listener function
+  // Add position variables
 
   var xCenter = window.innerWidth / 2;
-  var yCenter = window.innerHeight / 2;
   var cameraLookPoint = new THREE.Vector3(0,0,0);
+  var radius = 12;
+  var cameraPosition = [0, radius];
+
+  function findZPosition(num) {
+    var z = Math.sqrt(Math.pow(radius, 2) - (Math.pow(num, 2)));
+    if (isNaN(z)) {
+      return 1;
+    }
+    else {
+      return z;
+    }
+  }
+
+  function findXPosition(num) {
+    if (Math.abs(num) > radius) {
+      return radius * (num / Math.abs(num));
+    }
+    else {
+      return num;
+    }
+  }
 
   $("canvas").mousemove(function(event) {
     var xPosition = -(xCenter - (event.pageX)) / 40;
-    var yPosition = (yCenter - (event.pageY)) / 40;
-    var mouse = [xPosition, yPosition];
-    // console.log(mouse);
-    // console.log(xCenter);
-    cameraLookPoint.setX(xPosition);
-    cameraLookPoint.setY(yPosition);
+    // console.log(xPosition);
+    cameraPosition[0] = findXPosition(xPosition);
+    cameraPosition[1] = findZPosition(xPosition);
+    // console.log(cameraPosition);
   });
 
 
@@ -108,7 +128,8 @@ $(document).ready(function() {
     // camera.position.x = mouse[0];
     // camera.position.y = mouse[1];
     camera.lookAt(cameraLookPoint);
-
+    camera.position.x = cameraPosition[0];
+    camera.position.z =cameraPosition[1];
     renderer.render(scene, camera);
   }
 
