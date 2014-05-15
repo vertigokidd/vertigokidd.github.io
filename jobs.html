@@ -2,7 +2,7 @@
 <head>
 	<title></title>
 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-	<script src="viz.js" charset="utf-8"></script>
+  <script src="viz.js" charset="utf-8"></script>
 <style>
 
 body {
@@ -42,6 +42,11 @@ input:checked+label{
   font-weight:bold;
 }
 
+.infobox {
+  position:absolute;
+  /*bottom: 0;*/
+}
+
 </style>
 <form>
   <input type="radio" name="mode" value="four" checked><label> 2004</label>
@@ -59,6 +64,6 @@ input:checked+label{
 </head>
 <body>
 
-<footer>Data from the <a href="http://www.bls.gov/news.release/empsit.toc.htm">US Bureau of Labor Statistics</a></footer>
+<div class="infobox">Data from the <a href="http://www.bls.gov/news.release/empsit.toc.htm">US Bureau of Labor Statistics</a></div>
 </body>
 </html>

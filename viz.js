@@ -55,9 +55,6 @@ var tip = d3.select("body").append("div")
       });
 
   d3.selectAll("input").on("change", function change() {
-    // var value = this.value === "fourteen"
-    //   ? function(d) { return d.fourteen; }
-    //   : function(d) { return d.four; };
 
     var value = this.value;
 
