@@ -76,13 +76,14 @@ $(document).ready(function() {
 
   // Add camera
 
-  camera.position.z = 12;
+  var radius = 15;
+
+  camera.position.z = radius;
 
   // Add position variables
 
   var xCenter = window.innerWidth / 2;
   var cameraLookPoint = new THREE.Vector3(0,0,0);
-  var radius = 12;
   var cameraPosition = [0, radius];
 
   function findZPosition(num) {
@@ -105,7 +106,7 @@ $(document).ready(function() {
   }
 
   $("canvas").mousemove(function(event) {
-    var xPosition = -(xCenter - (event.pageX)) / 60;
+    var xPosition = -(xCenter - (event.pageX)) / 40;
     // console.log(xPosition);
     cameraPosition[0] = findXPosition(xPosition);
     cameraPosition[1] = findZPosition(xPosition);
