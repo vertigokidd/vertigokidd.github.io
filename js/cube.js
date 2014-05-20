@@ -93,9 +93,6 @@ $(document).ready(function() {
   });
 
 
-
-  
-
   // Add a render loop
 
   function render() {
