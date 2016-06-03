@@ -10,13 +10,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>The Big Picture - Start Bootstrap Template</title>
+    <title>Michael Rhee - Life of a Keurig</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/the-big-picture.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -46,13 +47,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="#about">About</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="https://www.linkedin.com/in/michael-rhee-62735273"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="https://www.twitter.com/rheedio"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
                     </li>
                 </ul>
             </div>
@@ -67,6 +68,18 @@
             <div class="col-md-6 col-sm-12">
                 <h1>Life of a Keurig</h1>
                 <p>What happens when you monitor the electricity consumption of an office coffee maker.</p>
+            </div>
+            <div id="chart1"></div>
+        </div>
+        <!-- /.row -->
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <a name="about" class="page_link"><h1>About</h1></a>
+                <p>I monitored the electricity usage of an office Keurig machine over the course of two weeks in May/June 2016. The hardware included a <a href="https://learn.adafruit.com/tweet-a-watt/overview-1">hacked wattage meter</a> and a Raspberry Pi, which streamed data to AWS every two seconds. That data was collected, processed, and stored completely in the AWS cloud using Kinesis, S3, Lambda, and EC2.<p><br>
+                <p>I'm a data engineer specializing in Hadoop and AWS.</p>
             </div>
             <div id="chart1"></div>
         </div>

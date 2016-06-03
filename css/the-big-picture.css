@@ -18,6 +18,8 @@ body {
   background-size: cover;
 }
 
+/* D3 Style */
+
 .axis path,
 .axis line {
   fill: none;
@@ -34,3 +36,5 @@ body {
   stroke: steelblue;
   stroke-width: 1.5px;
 }
+
+/* Custom */
