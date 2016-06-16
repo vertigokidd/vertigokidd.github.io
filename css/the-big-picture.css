@@ -5,13 +5,14 @@
  */
 
 body {
-	margin-top: 50px;
+	margin-top: 100px;
 	margin-bottom: 50px;
+  margin-left:100px;
 	background: none;
 }
 
 .full {
-  background: url(../img/coffee-med.jpg) no-repeat center center fixed; 
+  background: url(../img/coffee-full.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
