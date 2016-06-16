@@ -30,6 +30,8 @@ var svg = d3.select("#chart1").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var zoom = d3.behavior.zoom()
+    .x(x)
+    .scaleExtent([1, 20])
     .on("zoom", draw);
 
 var url = 'data/stats.json'
