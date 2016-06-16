@@ -29,6 +29,9 @@ var svg = d3.select("#chart1").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+var zoom = d3.behavior.zoom()
+    .on("zoom", draw);
+
 var url = 'data/stats.json'
 d3.json(url, function(error, data) {
   if (error) throw error;
@@ -38,6 +41,7 @@ d3.json(url, function(error, data) {
   //})
   x.domain(d3.extent(data, function(d) { return (d.unix_time * 1000); }));
   y.domain(d3.extent(data, function(d) { return d.avg_watt; }));
+  zoom.x(x);
 
   svg.append("g")
       .attr("class", "x axis")
@@ -58,7 +62,15 @@ d3.json(url, function(error, data) {
       .datum(data)
       .attr("class", "line")
       .attr("d", line);
+
+  draw();
 });
+
+function draw() {
+  svg.select("g.x.axis").call(xAxis);
+  svg.select("g.y.axis").call(yAxis);
+  svg.select("path.line").attr("d", line);
+}
 
 function type(d) {
   //d.date = formatDate.parse(d.date);
