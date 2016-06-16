@@ -37,6 +37,12 @@ body {
   stroke-width: 1.5px;
 }
 
+rect.pane {
+  cursor: move;
+  fill: none;
+  pointer-events: all;
+}
+
 /* Custom */
 
 #spacer {

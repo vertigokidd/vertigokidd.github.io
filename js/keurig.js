@@ -63,6 +63,12 @@ d3.json(url, function(error, data) {
       .attr("class", "line")
       .attr("d", line);
 
+  svg.append("rect")
+    .attr("class", "pane")
+    .attr("width", width)
+    .attr("height", height)
+    .call(zoom);
+
   draw();
 });
 
