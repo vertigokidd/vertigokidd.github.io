@@ -42,7 +42,6 @@ d3.json(url, function(error, data) {
   x.domain(d3.extent(data, function(d) { return (d.unix_time * 1000); }));
   y.domain(d3.extent(data, function(d) { return d.avg_watt; }));
   zoom.x(x);
-  zoom.y(y);
 
   svg.append("g")
       .attr("class", "x axis")
