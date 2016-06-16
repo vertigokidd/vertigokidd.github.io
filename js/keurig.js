@@ -31,7 +31,8 @@ var svg = d3.select("#chart1").append("svg")
 
 var zoom = d3.behavior.zoom()
     .x(x)
-    .scaleExtent([1, 20])
+    .scale(5)
+    .scaleExtent([1, 25])
     .on("zoom", draw);
 
 var url = 'data/stats.json'
