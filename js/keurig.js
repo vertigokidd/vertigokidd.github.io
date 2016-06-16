@@ -1,5 +1,5 @@
 var margin = {top: 20, right: 20, bottom: 30, left: 50},
-    width = 1060 - margin.left - margin.right,
+    width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
 var formatDate = d3.time.format("%H:%M %p");
@@ -12,7 +12,10 @@ var y = d3.scale.linear()
 
 var xAxis = d3.svg.axis()
     .scale(x)
-    .orient("bottom");
+    .orient("bottom")
+    .ticks(4)
+    .tickSize(-height, 0)
+    .tickPadding(2);
 
 var yAxis = d3.svg.axis()
     .scale(y)
@@ -29,9 +32,17 @@ var svg = d3.select("#chart1").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+svg.append("clipPath")
+    .attr("id", "clip")
+  .append("rect")
+    .attr("x", x(0))
+    .attr("y", y(1))
+    .attr("width", width)
+    .attr("height", height);
+
 var zoom = d3.behavior.zoom()
     .x(x)
-    .scaleExtent([1, 25])
+    .scaleExtent([1, 50])
     .on("zoom", draw);
 
 var url = 'data/stats.json'
@@ -43,7 +54,7 @@ d3.json(url, function(error, data) {
   //})
   x.domain(d3.extent(data, function(d) { return (d.unix_time * 1000); }));
   y.domain(d3.extent(data, function(d) { return d.avg_watt; }));
-  zoom.x(x);
+  zoom.x(x).scale(2).translate([-250,0]);
 
   svg.append("g")
       .attr("class", "x axis")
@@ -63,7 +74,8 @@ d3.json(url, function(error, data) {
   svg.append("path")
       .datum(data)
       .attr("class", "line")
-      .attr("d", line);
+      .attr("d", line)
+      .attr("clip-path", "url(#clip)");
 
   svg.append("rect")
     .attr("class", "pane")

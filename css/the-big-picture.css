@@ -11,7 +11,7 @@ body {
 }
 
 .full {
-  background: url(../img/coffee.png) no-repeat center center fixed; 
+  background: url(../img/coffee-med.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -33,14 +33,6 @@ body {
 
 .x.axis path {
   display: none;
-}
-
-.grid .tick {
-    stroke: lightgrey;
-    opacity: 0.7;
-}
-.grid path {
-      stroke-width: 0;
 }
 
 .line {
