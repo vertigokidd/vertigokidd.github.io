@@ -31,7 +31,6 @@ var svg = d3.select("#chart1").append("svg")
 
 var zoom = d3.behavior.zoom()
     .x(x)
-    .scale([5])
     .scaleExtent([1, 25])
     .on("zoom", draw);
 

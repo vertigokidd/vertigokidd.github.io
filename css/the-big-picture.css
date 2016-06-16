@@ -18,6 +18,10 @@ body {
   background-size: cover;
 }
 
+.navbar {
+  z-index:1;
+}
+
 /* D3 Style */
 
 .axis path,
@@ -29,6 +33,14 @@ body {
 
 .x.axis path {
   display: none;
+}
+
+.grid .tick {
+    stroke: lightgrey;
+    opacity: 0.7;
+}
+.grid path {
+      stroke-width: 0;
 }
 
 .line {
