@@ -45,7 +45,7 @@ var zoom = d3.behavior.zoom()
     .scaleExtent([1, 50])
     .on("zoom", draw);
 
-var url = 'data/stats.json'
+var url = 'data/statsall.json'
 d3.json(url, function(error, data) {
   if (error) throw error;
   //data.forEach(function(d){
